@@ -77,35 +77,35 @@ def question7():
 # -----------------------------------------------------------
 def question8():
     answers = {}
-
+    # work is in work.ipynb
     # float
-    answers["(a) P(X_1=1)"] = None
-    answers["(a) P(X_2=1)"] = None
-    answers["(a) P(X_1=1,X_2=1)"] = None
+    answers["(a) P(X_1=1)"] = .65
+    answers["(a) P(X_2=1)"] = .41
+    answers["(a) P(X_1=1,X_2=1)"] = .28
 
     # string: "dependent" or "independent"
-    answers["(a) Relationship between X_1 and X_2"] = None
+    answers["(a) Relationship between X_1 and X_2"] = "independent"
 
     # string: "yes" or "no"
-    answers["(b) X_1 and X_2 conditionally independent given the class?"] = None
+    answers["(b) X_1 and X_2 conditionally independent given the class?"] = "yes"
 
     # float
-    answers["(c) P(X_1=1 | +)"] = None
-    answers["(c) P(X_1=1 | -)"] = None
-    answers["(c) P(X_2=1 | +)"] = None
-    answers["(c) P(X_2=1 | -)"] = None
-    answers["(c) P(X_3=1 | +)"] = None
-    answers["(c) P(X_3=1 | -)"] = None
+    answers["(c) P(X_1=1 | +)"] = .8
+    answers["(c) P(X_1=1 | -)"] = .5
+    answers["(c) P(X_2=1 | +)"] = .5
+    answers["(c) P(X_2=1 | -)"] = .32
+    answers["(c) P(X_3=1 | +)"] = .4
+    answers["(c) P(X_3=1 | -)"] = .4
 
     # For each row give the class predicted by the model after training using Naive Bayes
     # String: either '+' or '-'
-    answers["(d) Row 1"] = None
-    answers["(d) Row 2"] = None
-    answers["(d) Row 3"] = None
-    answers["(d) Row 4"] = None
+    answers["(d) Row 1"] = '+'
+    answers["(d) Row 2"] = '+'
+    answers["(d) Row 3"] = '-'
+    answers["(d) Row 4"] = '-'
 
     # float between 0 and 1
-    answers["(d) Training error rate"] = None
+    answers["(d) Training error rate"] = 0.0
 
     return answers
 
@@ -114,12 +114,12 @@ def question9():
     answers = {}
 
     # int
-    answers["(a) K"] = None
-    answers["(b) K"] = None
+    answers["(a) K"] = 5
+    answers["(b) K"] = 50
 
     # explain_string
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
+    answers["(a) explain"] = "A smaller number of k would be better, since there is a clear separation between groups and a smaller k would lead to less missclassification for the points close to the tight red cluster."
+    answers["(b) explain"] = "A larger number of k would be better here, since the values are more mixed and a small k would lead to a lot of missclassification."
 
     return answers
 
@@ -128,54 +128,54 @@ def question10():
     answers = {}
 
     # float
-    answers["(a) P(A=1|+)"] = None
-    answers["(a) P(B=1|+)"] = None
-    answers["(a) P(C=1|+)"] = None
-    answers["(a) P(A=1|-)"] = None
-    answers["(a) P(B=1|-)"] = None
-    answers["(a) P(C=1|-)"] = None
+    answers["(a) P(A=1|+)"] = 3/5
+    answers["(a) P(B=1|+)"] = 2/5
+    answers["(a) P(C=1|+)"] = 4/5
+    answers["(a) P(A=1|-)"] = 2/5
+    answers["(a) P(B=1|-)"] = 3/5
+    answers["(a) P(C=1|-)"] = 1/5
 
     # type: explanatory string
-    answers["(a) P(A=1|+) explain your answer"] = None
+    answers["(a) P(A=1|+) explain your answer"] = "There are 3 instances where A is present in a class labeled positive."
   
     # type: float
     # note: R is the sample (A=1,B=1,C=1)
-    answers["(b) P(+|R)"] = None 
-    answers["(b) P(R|+)"] = None
-    answers["(b) P(R|-)"] = None
+    answers["(b) P(+|R)"] = .8 #work in work.ipynb
+    answers["(b) P(R|+)"] = .192
+    answers["(b) P(R|-)"] = .048
 
     # string, '+' or '-'
-    answers["(b) class label"] = None
+    answers["(b) class label"] = "+"
 
     # explain_string
-    answers["(b) Explain your reasoning"] = None
+    answers["(b) Explain your reasoning"] = "The posterior for the positive probabilities is greater than that of the negatives."
   
     # float
-    answers["(c) P(A=1)"] = None
-    answers["(c) P(B=1)"] = None
-    answers["(c) P(A=1,B=1)"] = None
+    answers["(c) P(A=1)"] = .5
+    answers["(c) P(B=1)"] = .4
+    answers["(c) P(A=1,B=1)"] = .2
 
     # type: string, 'yes' or 'no'
-    answers["(c) A independent of B?"] = None
-  
+    answers["(c) A independent of B?"] = 'yes' if .2 == .5*.4 else 'no'
+    
     # type: float
-    answers["(d) P(A=1)"] = None
-    answers["(d) P(B=0)"] = None
-    answers["(d) P(A=1,B=0)"] = None
+    answers["(d) P(A=1)"] = .5
+    answers["(d) P(B=0)"] = .6
+    answers["(d) P(A=1,B=0)"] = .3
 
     # type: string: 'yes' or 'no'
-    answers["(d) A independent of B?"] = None
+    answers["(d) A independent of B?"] = 'yes' if .3 == .5*.6 else 'no'
   
     # type: float
-    answers["(e) P(A=1,B=1|+)"] = None
-    answers["(e) P(A=1|+)"] = None
-    answers["(e) P(B=1|+)"] = None
+    answers["(e) P(A=1,B=1|+)"] = .1
+    answers["(e) P(A=1|+)"] = .3
+    answers["(e) P(B=1|+)"] = .2
 
     # type: string: 'yes' or 'no'
-    answers["(e) A independent of B given class +?"] = None
+    answers["(e) A independent of B given class +?"] = 'yes' if .1 == .3*.2 else 'no'
 
     # type: explanatory string
-    answers["(e) A and B conditionally independent given class +, explain"] =  None
+    answers["(e) A and B conditionally independent given class +, explain"] = "They are not independent, since the product of P(A=1|+) and P(B=1|+) is not equal to P(A=1,B=1 |+)"
   
     return answers
 # --------------------------------------------------------
